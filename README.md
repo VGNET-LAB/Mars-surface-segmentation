@@ -26,4 +26,4 @@ A comprehensive semantic segmentation pipeline for Mars surface imagery using a 
 ---
 
 ---
-Contibutors: [Anoushka Chatterjee](https://github.com/anoushkaacc) and keerthana
+Contibutors: [Anoushka Chatterjee](https://github.com/anoushkaacc) and [Keerthana](https://github.com/KeerthanaKodes)
