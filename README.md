@@ -17,7 +17,7 @@ The project aims to support automated Martian terrain mapping by:
 - Investigating model binarization and quantization for more efficient inference.
 - Comparing models using reproducible evaluation procedures and class-wise metrics.
 
-These methods are intended for research in planetary image analysis, geological mapping, rover mobility, and landing-site assessment. They are **not** a substitute for independent validation or expert review in operational mission decisions.
+These methods are intended for research in planetary image analysis, geological mapping, rover mobility, and landing-site assessment. 
 
 ## Current research tracks
 
@@ -45,7 +45,7 @@ The updated MarTA-Net dataset is hosted on Hugging Face:
 
 - **Dataset repository:** [Anoushkaacc/MarTA-Net](https://huggingface.co/datasets/Anoushkaacc/MarTA-Net)
 
-The dataset card describes HiRISE Martian surface imagery paired with segmentation masks for 12 terrain classes. The published card reports approximately 200 manually annotated source images, around 10,000 augmented training image–mask pairs, and 227 validation pairs. Refer to the dataset card for the current structure, label mapping, usage notes, and any updates to these counts.
+Refer to the dataset card for the current structure, label mapping, usage notes, and any updates to these counts.
 
 ## Repository structure
 
@@ -74,7 +74,7 @@ This tree reflects the layout currently tracked in the repository. Notebooks and
 
 ## Evaluation and experimentation
 
-The repository includes validation scripts and model-specific experiments. Evaluation should report both aggregate and class-wise performance wherever possible, including:
+The repository includes validation scripts and model-specific experiments. Evaluation report includes both aggregate and class-wise performance wherever possible, including:
 
 - Intersection over Union (IoU) and mean IoU (mIoU)
 - Dice coefficient
@@ -84,21 +84,17 @@ The repository includes validation scripts and model-specific experiments. Evalu
 
 For reliable comparison, evaluate models with consistent preprocessing, class definitions, data splits, and metric implementations. Where augmented images originate from the same manually annotated source image, use source-grouped train/validation/test splits to reduce augmentation leakage. Record the dataset version, random seed, training configuration, checkpoint, and evaluation protocol with each reported result.
 
-**No comparative performance claim is made here for Y-Net or CCHNet.** Add metrics only after the relevant experiments have been completed and checked against a documented evaluation protocol.
-
 ## Research progress log
 
 Updates are recorded here to make the evolution of the project visible. Add dated entries as milestones are completed.
 
 | Date / period | Milestone | Status |
 |---|---|---|
-| 2026 | MarTA-Net paper published in the *IEEE Internet of Things Journal*. | Completed |
-| 2026 | Updated MarTA-Net dataset released on Hugging Face. | Completed |
+| 2025 - 2026 | MarTA-Net paper published in the *IEEE Internet of Things Journal*. | Completed |
+| 2026 | Updated MarTA-Net dataset (12 class) released on Hugging Face. | Completed |
 | 2026 | Y-Net experimentation includes attention-enhanced encoder–decoder features, a boundary-prediction branch, and rare-class-aware training. | In progress |
 | 2026 | CCHNet implementation and associated binarization and quantization scripts are present in the repository. | In progress |
 | Ongoing | Standardized evaluation, cross-model comparisons, and documentation of model efficiency and generalization. | Planned / ongoing |
-
-For future entries, include the date, experiment or dataset version, main change, evaluation split, key metrics, and a link to the relevant code or report. Distinguish completed results from hypotheses and planned work.
 
 ## Reproducibility notes
 
